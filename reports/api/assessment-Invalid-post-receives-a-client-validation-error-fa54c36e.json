@@ -1,0 +1,37 @@
+{
+  "recordedAt": "2026-10-05T20:51:49.632Z",
+  "method": "POST",
+  "url": "https://jsonplaceholder.typicode.com/posts",
+  "case": "missing userId",
+  "request": {
+    "title": "Boundary test",
+    "body": "Assessment test data"
+  },
+  "status": 201,
+  "responseHeaders": {
+    "date": "Mon, 05 Oct 2026 20:51:49 GMT",
+    "content-type": "application/json; charset=utf-8",
+    "content-length": "77",
+    "connection": "keep-alive",
+    "access-control-allow-credentials": "true",
+    "access-control-expose-headers": "Location",
+    "cache-control": "no-cache",
+    "etag": "W/\"4d-JAJldErLBINl7L7I3joO77cOvgI\"",
+    "expires": "-1",
+    "location": "https://jsonplaceholder.typicode.com/posts/101",
+    "pragma": "no-cache",
+    "vary": "Origin, X-HTTP-Method-Override, Accept-Encoding",
+    "x-content-type-options": "nosniff",
+    "x-powered-by": "Express",
+    "x-ratelimit-limit": "3600000",
+    "x-ratelimit-remaining": "3599986",
+    "x-ratelimit-reset": "1791235135",
+    "cf-cache-status": "DYNAMIC",
+    "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=Qz2O%2F%2BzhhhmmUjYyxhwBue9fE3sXzr4ThSyKXyOjT3WM1LiVCu%2FWiuTZr3Nyb5K4rtVQgX73HpLw7%2Bwx1BZ7BCV%2FuK%2BrEhsISKJNL0cSkvL%2FNOdNC8EThO1JO4l0bPsOJn0Q9SegH6RG%2BlyPf%2FW3tuIi976hFVqrdSCX\"}]}",
+    "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+    "server": "cloudflare",
+    "cf-ray": "a45f4e793ed46d97-SIN",
+    "alt-svc": "h3=\":443\"; ma=86400"
+  },
+  "responseBody": "{\n  \"title\": \"Boundary test\",\n  \"body\": \"Assessment test data\",\n  \"id\": 101\n}"
+}

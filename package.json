@@ -1,0 +1,25 @@
+{
+  "name": "streamhub-qa-assessment",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Section A: loan planner, Playwright/Cucumber automation and SQL exercises",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "start": "node app/server.js",
+    "test": "node scripts/run-tests.js assessment",
+    "test:ui": "node scripts/run-tests.js ui",
+    "test:api": "node scripts/run-tests.js api",
+    "test:api:observed": "node scripts/run-tests.js observed",
+    "test:broken": "node scripts/run-tests.js broken",
+    "test:sql": "python3 sql/run_queries.py",
+    "report:sql": "node scripts/capture-sql.js",
+    "report:summary": "node scripts/summarize.js",
+    "test:healing": "node scripts/run-tests.js healing"
+  },
+  "devDependencies": {
+    "@cucumber/cucumber": "13.3.0",
+    "@playwright/test": "1.63.0"
+  }
+}

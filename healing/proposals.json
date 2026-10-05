@@ -1,0 +1,6 @@
+{
+  "loan-amount": { "method": "label", "name": "Loan amount (INR)" },
+  "calculate": { "method": "role", "role": "button", "name": "Calculate repayment" },
+  "summary": { "method": "testId", "name": "monthly-payment" },
+  "report-link": { "method": "navigationLink", "name": "Repayment report" }
+}

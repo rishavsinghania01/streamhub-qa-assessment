@@ -1,0 +1,21 @@
+{
+  "recorded_at": "2026-10-05T20:44:41.424543+00:00",
+  "sqlite_version": "3.50.4",
+  "checks": [
+    "exact fixture outputs",
+    "inclusive 10% bounds",
+    "inclusive 24 hours",
+    "reject 24 hours + 1 second",
+    "same currency only",
+    "deterministic simultaneous pair",
+    "low scores break streaks",
+    "runs = 30 qualifies",
+    "2023 excluded",
+    "consecutive player appearances",
+    "extra late return stays excluded",
+    "mutation from 45 to 29 breaks the first streak"
+  ],
+  "status": "passed",
+  "round_trip_rows": 4,
+  "streak_rows": 4
+}

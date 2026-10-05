@@ -1,0 +1,55 @@
+{
+  "generatedAt": "2026-10-05T20:51:56.446Z",
+  "environment": {
+    "node": "v24.16.0",
+    "platform": "darwin",
+    "architecture": "arm64",
+    "playwright": "1.63.0",
+    "cucumber": "13.3.0",
+    "sqlite": "3.50.4"
+  },
+  "results": {
+    "ui": {
+      "total": 18,
+      "passed": 18,
+      "failed": 0,
+      "incomplete": 0
+    },
+    "api": {
+      "total": 3,
+      "passed": 0,
+      "failed": 3,
+      "incomplete": 0
+    },
+    "observed": {
+      "total": 3,
+      "passed": 3,
+      "failed": 0,
+      "incomplete": 0
+    },
+    "broken": {
+      "total": 4,
+      "passed": 0,
+      "failed": 4,
+      "incomplete": 0
+    },
+    "healing": {
+      "total": 5,
+      "passed": 5,
+      "failed": 0,
+      "incomplete": 0
+    },
+    "assessment": {
+      "total": 21,
+      "passed": 18,
+      "failed": 3,
+      "incomplete": 0
+    }
+  },
+  "sql": {
+    "status": "passed",
+    "checks": 12,
+    "roundTripRows": 4,
+    "streakRows": 4
+  }
+}

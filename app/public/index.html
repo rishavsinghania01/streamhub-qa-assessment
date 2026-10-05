@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Loan Ledger</title>
+  <link rel="stylesheet" href="/styles.css">
+  <script type="module" src="/app.js"></script>
+</head>
+<body>
+  <header>
+    <a class="brand" href="#dashboard">Loan Ledger</a>
+    <nav aria-label="Main navigation">
+      <a href="#dashboard" aria-current="page">Dashboard</a>
+      <a href="#report">Repayment report</a>
+    </nav>
+  </header>
+  <main>
+    <section id="dashboard" aria-labelledby="dashboard-title">
+      <p class="eyebrow">PLAN YOUR BORROWING</p>
+      <h1 id="dashboard-title">A clearer view of your loan.</h1>
+      <p class="intro">Compare the monthly payment and see how your balance falls over time.</p>
+      <div class="dashboard-grid">
+        <form id="loan-form" novalidate>
+          <h2>Loan details</h2>
+          <label for="amount">Loan amount (INR)</label>
+          <input id="amount" name="amount" type="number" min="1" max="100000000" step="1" value="2500000" required>
+          <label for="rate">Annual interest rate (%)</label>
+          <input id="rate" name="rate" type="number" min="0" max="40" step="0.01" value="10" required>
+          <label for="years">Loan tenure (years)</label>
+          <input id="years" name="years" type="number" min="1" max="40" step="1" value="10" required>
+          <p id="form-error" role="alert" hidden></p>
+          <button type="submit">Calculate repayment</button>
+          <p class="hint">Fixed rate, monthly payments. Fees and taxes are excluded.</p>
+        </form>
+        <div class="summary" aria-live="polite" aria-atomic="true">
+          <p class="eyebrow">MONTHLY PAYMENT</p>
+          <output data-testid="monthly-payment" aria-label="Monthly payment"></output>
+          <dl>
+            <div><dt>Total interest</dt><dd data-testid="total-interest"></dd></div>
+            <div><dt>Total repayment</dt><dd data-testid="total-repayment"></dd></div>
+            <div><dt>Number of payments</dt><dd data-testid="payment-count"></dd></div>
+          </dl>
+          <a class="report-link" href="#report">View repayment report <span aria-hidden="true">→</span></a>
+        </div>
+      </div>
+    </section>
+    <section id="report" aria-labelledby="report-title" hidden>
+      <p class="eyebrow">YEAR BY YEAR</p>
+      <h1 id="report-title">Repayment report</h1>
+      <p id="report-description" class="intro"></p>
+      <div class="chart-card">
+        <h2>Where each year's payments go</h2>
+        <div class="legend"><span class="principal-key">Principal</span><span class="interest-key">Interest</span></div>
+        <svg id="repayment-chart" viewBox="0 0 860 300" role="img" aria-label="Annual principal and interest payments"></svg>
+      </div>
+      <div class="table-card">
+        <table aria-label="Annual repayment schedule">
+          <thead><tr><th scope="col">Year</th><th scope="col">Principal paid</th><th scope="col">Interest paid</th><th scope="col">Balance remaining</th></tr></thead>
+          <tbody id="schedule-body"></tbody>
+        </table>
+      </div>
+      <a class="report-link" href="#dashboard">Edit loan details</a>
+    </section>
+  </main>
+  <footer>Loan Ledger · Estimates for planning, rounded to the nearest paise.</footer>
+</body>
+</html>

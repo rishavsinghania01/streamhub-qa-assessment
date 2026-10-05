@@ -1,0 +1,35 @@
+.....F.....F.....F..
+
+Failed scenarios:
+  1) Invalid post receives a client validation error # features/posts.feature:14
+       And the API rejects the post with a validation error # features/steps/posts.steps.js:34
+           AssertionError [ERR_ASSERTION]: Expected a 4xx validation response; observed 201 for long title
+               + expected - actual
+           
+               -false
+               +true
+           
+               at TestWorld.<anonymous> (/Users/rishavsinghania/Downloads/2026-10-04/https-workat-learntube-ai-tech-ai/outputs/streamhub-qa-assessment/features/steps/posts.steps.js:36:10)
+  2) Invalid post receives a client validation error # features/posts.feature:15
+       And the API rejects the post with a validation error # features/steps/posts.steps.js:34
+           AssertionError [ERR_ASSERTION]: Expected a 4xx validation response; observed 201 for special characters
+               + expected - actual
+           
+               -false
+               +true
+           
+               at TestWorld.<anonymous> (/Users/rishavsinghania/Downloads/2026-10-04/https-workat-learntube-ai-tech-ai/outputs/streamhub-qa-assessment/features/steps/posts.steps.js:36:10)
+  3) Invalid post receives a client validation error # features/posts.feature:16
+       And the API rejects the post with a validation error # features/steps/posts.steps.js:34
+           AssertionError [ERR_ASSERTION]: Expected a 4xx validation response; observed 201 for missing userId
+               + expected - actual
+           
+               -false
+               +true
+           
+               at TestWorld.<anonymous> (/Users/rishavsinghania/Downloads/2026-10-04/https-workat-learntube-ai-tech-ai/outputs/streamhub-qa-assessment/features/steps/posts.steps.js:36:10)
+
+2 hooks (2 passed)
+3 scenarios (3 failed)
+18 steps (15 passed, 3 failed)
+0m 1.815s (0m 1.515s executing your code)

@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Streamhub assessment results</title>
+<style>body{max-width:950px;margin:48px auto;padding:0 24px;font:16px/1.6 system-ui;color:#18332e;background:#f6f7f2}h1{line-height:1.2}table{border-collapse:collapse;width:100%;background:white}th,td{text-align:left;padding:14px;border:1px solid #dce3d9}th{background:#e8f0e7}a{color:#205e4e}img{max-width:100%;border:1px solid #dce3d9;border-radius:8px}.note{padding:18px;background:#fff2d9;border-radius:8px}code{font-size:14px}</style>
+<h1>Streamhub assessment results</h1>
+<p>Section A: Loan Ledger, UI/API automation, SQL queries and locator healing.</p>
+<p class="note">The requested JSONPlaceholder rejection checks fail: all three invalid inputs received 201 Created. The four broken locator cases also fail intentionally. These results are kept visible.</p>
+<table>
+<thead><tr><th>Suite</th><th>Result</th><th>Evidence</th></tr></thead>
+<tbody>
+<tr><td>Loan UI</td><td>18 passed</td><td><a href="ui.html">HTML report</a> · <a href="ui.log">Log</a></td></tr>
+<tr><td>API rejection contract</td><td>3 failed</td><td><a href="api.html">HTML report</a> · <a href="api.log">Log</a></td></tr>
+<tr><td>API observed behavior</td><td>3 passed</td><td><a href="observed.html">HTML report</a></td></tr>
+<tr><td>SQL</td><td>12 checks passed</td><td><a href="sql/execution.log">Log</a> · <a href="sql/results.json">Result JSON</a></td></tr>
+<tr><td>Broken locators</td><td>4 failed as intended</td><td><a href="broken.html">HTML report</a></td></tr>
+<tr><td>Healing validation</td><td>5 passed</td><td><a href="healing.html">HTML report</a></td></tr>
+<tr><td>Combined assessment</td><td>18 passed, 3 failed</td><td><a href="assessment.html">HTML report</a> · <a href="assessment.log">Log</a></td></tr>
+</tbody>
+</table>
+<p><a href="summary.json">Runtime versions and counts</a> · <a href="../README.md">README</a></p>
+<h2>Loan dashboard</h2>
+<img src="screenshots/ui-Dashboard-loads-with-a-default-loan-50de6ad5.png" alt="Loan dashboard showing the calculated monthly payment">
+<h2>Annual repayment report</h2>
+<img src="screenshots/ui-Payments-match-an-independent-amortization-calculation-6a62bcf6.png" alt="Repayment report with principal and interest bars and an annual schedule">
+<h2>SQL output: round-trip transfers</h2>
+<img src="sql/round_trips.png" alt="Executed round-trip query output with four matching transfer pairs">
+<h2>SQL output: player streaks</h2>
+<img src="sql/player_streaks.png" alt="Executed player streak query output with four qualifying streaks">
+</html>

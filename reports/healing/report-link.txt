@@ -1,0 +1,24 @@
+- main:
+  - region "A clearer view of your loan.":
+    - paragraph: PLAN YOUR BORROWING
+    - heading "A clearer view of your loan." [level=1]
+    - paragraph: Compare the monthly payment and see how your balance falls over time.
+    - heading "Loan details" [level=2]
+    - text: Loan amount (INR)
+    - spinbutton "Loan amount (INR)": "2500000"
+    - text: Annual interest rate (%)
+    - spinbutton "Annual interest rate (%)": "10"
+    - text: Loan tenure (years)
+    - spinbutton "Loan tenure (years)": "10"
+    - button "Calculate repayment"
+    - paragraph: Fixed rate, monthly payments. Fees and taxes are excluded.
+    - paragraph: MONTHLY PAYMENT
+    - status "Monthly payment": ₹33,037.68
+    - term: Total interest
+    - definition: ₹14,64,522.11
+    - term: Total repayment
+    - definition: ₹39,64,522.11
+    - term: Number of payments
+    - definition: "120"
+    - link "View repayment report":
+      - /url: "#report"

@@ -80,14 +80,6 @@ A scoring streak means consecutive matches **played by that player** in the 2024
 
 The runner compares exact expected rows and tests the 10%/24-hour boundaries, currencies, simultaneous timestamps, zero/29/30-run cases, multiple streaks, season exclusion and a score mutation that breaks a streak. It executes SQL in memory and exports the resulting tables before the mutation checks. [Schema](sql/schema.sql), [fixtures](sql/fixtures.sql), [round-trip query](sql/round_trips.sql), [streak query](sql/player_streaks.sql).
 
-## AI pair-programming reflection
-
-This project was built with OpenAI Codex. It was used to scaffold the application and framework, write and revise scenarios, investigate failing runs, and develop the locator-validation POC and SQL queries. No Claude Code session was used.
-
-The useful parts were turning the requirements into runnable scenarios, separating the app's calculation from its test oracle, and checking failures against actual responses. The first SQL draft used `returning` as an alias, which is reserved in SQLite; execution caught that and it was changed to `incoming`. A boundary UI scenario found about nine paise of drift in an early monthly balance implementation at the maximum rate/tenure. Discounted remaining payments removed that drift. The initial report naming also overwrote scenario-outline evidence; names now include a hash of the resolved steps.
-
-The AI did not supply a reliable API contract for JSONPlaceholder, and generated code still needed execution and review. The requested negative API checks remain red with the observed responses attached. The locator POC uses saved, reviewed proposals; it does not claim to call a model at runtime or silently repair tests. See [self-healing notes](docs/self-healing.md).
-
 ## References
 
 - [Playwright APIRequestContext](https://playwright.dev/docs/api/class-apirequestcontext)
